@@ -31,33 +31,7 @@ blockquote {
     margin: 0 auto; /* top+bottom og left+right */
     padding: 0;
 }
-.topbutt{
-    display: block;
-    position: fixed;
-    bottom: 2em;
-    right: 2em;
-    border-radius: 100%;
-    text-decoration: none;
-    padding: 0 .4em;
-    font-size: 2em;
-    color: darkblue;
-    border: 2px solid darkblue;
-    background-color: rgb(240, 202, 152)
-}
-/* grid */
-.col-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 
-.col-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.col-4 {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
 .gap-4 {
     grid-gap: 4em
 }
@@ -139,4 +113,14 @@ audio {
 }
 .sec4{
     grid-area: sec4;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "sec1"
+        "sec2"
+        "sec3"
+        "sec4";
 }
