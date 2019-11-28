@@ -1,42 +1,142 @@
-/**Myndir**/
-.logo {
-    max-width: 200px;
-    height: auto;
+* { box-sizing: border-box }
+
+body {
+    margin: 0; /* tek út sjálgefið 10px margin */
+    /* font-family: ;*/
+    font: 400 1em/1.5 'Open sans', sans-serif; /* samsett skipun: weight/height, size, family */
+    background-color: grey;
 }
-/**Grid**/
-header {
-    grid-area: header;
+h1 {
+    font-weight: 300;
+    font-size: 2.5em;
 }
-/**Grid í Header**/
-.logo {
-    grid-area: logo;
+blockquote {
+    padding: 1em;
+    background-color: rgba(255,255,255, .3);
+}
+.headcolor {
+    color: #fff;
+    text-align: center;
+}
+.footcolor {
+    color: #fff;
+    padding-left: 2em;
+}
+.bground {
+    background-color: white;
+    padding: 1em;
+}
+.container {
+    max-width: 60em; /*960px = fartölvur*/
+    margin: 0 auto; /* top+bottom og left+right */
+    padding: 0;
+}
+.topbutt{
+    display: block;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border-radius: 100%;
+    text-decoration: none;
+    padding: 0 .4em;
+    font-size: 2em;
+    color: darkblue;
+    border: 2px solid darkblue;
+    background-color: rgb(240, 202, 152)
+}
+/* grid */
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.col-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.col-4 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.gap-4 {
+    grid-gap: 4em
+}
+.headcolor h1 {
+    margin: 2em 0 1em 0;
+}
+.headcolor p {
+    text-align: right;
+}
+.topnav a, .footnav a {
+    color: rgb(255, 202, 152); 
+    text-decoration: none;
+}
+.footnav li {
+    list-style-type: none;
+    line-height: 2;
 }
 .topnav {
-    grid-area: topnav;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
-/****/
-section {
-    grid-area: section;
-}
-footer {
-    grid-area: footer;
-}
-body {
-    display: grid;
-    grid-gap: 0;
-    grid-template-areas:
-    "header"
-    "section"
-    "footer";
-}
-header {
-    max-width: 60em;
-    margin: 0;
+.footnav{
     padding: 0;
-    display: grid;
-    grid-gap: 0;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "logo topnav";
+}
+.topnav a {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.innermenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.innermenu a {
+    background-color: darkblue;
+    text-decoration: none;
+    color: rgb(255, 202, 152); 
+    padding: .5em 1em;
+    border-right: 2px solid #fff;
+}
+.innermenu a:hover {
+    color: darkblue;
+    background-color: rgb(255, 202, 152); 
+}
+.copy {
+    color:rgb(255, 202, 152);
+    text-align: center;
+}
+.vheight {
+    height: 100vh;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;   
+}
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.footerpadding {
+    padding-left: 2em;
+}
+audio {
+    width: 100%;
+}
 
+
+.sec1{
+    grid-area: sec1;
+}
+.sec2{
+    grid-area: sec2;
+}
+.sec3{
+    grid-area: sec3;
+}
+.sec4{
+    grid-area: sec4;
 }
