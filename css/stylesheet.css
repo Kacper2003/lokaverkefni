@@ -12,8 +12,9 @@ h1 {
     font-size: 2.5em;
 }
 .font {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Cinzel', serif;
     color: #fff;
+    font: bold;
 }
 blockquote {
     padding: 1em;
@@ -112,6 +113,10 @@ audio {
 .sec2{
     grid-area: sec2;
 }
+.maplayout {
+    justify-content: center;
+    display: flex;
+}
 .sec3{
     grid-area: sec3;
 }
@@ -127,6 +132,9 @@ main {
         "sec2"
         "sec3"
         "sec4";
+}
+footer {
+    color: #fff;
 }
 .head1 {
     grid-area: head1;
